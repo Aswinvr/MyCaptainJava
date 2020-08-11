@@ -1,0 +1,38 @@
+package minutestoyearsanddays;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class Minutestoyearsanddays {
+    public static void sopln(String str){
+        System.out.println(str);
+    }
+    public static int years(Double min){
+        int years = (int) (min/(60*24*365));
+        return years;
+
+    }
+    public static int days(Double min){
+        int days;
+        days = (int) (min/(60*24)%365);
+        return days;
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+       
+        Scanner sc = new Scanner(System.in);
+        Double min;
+        min = sc.nextDouble();
+        int d = days(min);
+        int y = years(min);
+        sopln(min+" miunutes is approximately "+y+" years and "+d+" days");
+    }
+    
+}
